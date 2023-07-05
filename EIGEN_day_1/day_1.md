@@ -1,7 +1,10 @@
 # 用到的参考链接
-`<官方文档>` : <http://eigen.tuxfamily.org/dox/GettingStarted.html> 
-`<中文教程>` : <https://github.com/qixianyu-buaa/EigenChineseDocument> 
+`<官方文档>` : <http://eigen.tuxfamily.org/dox/GettingStarted.html>
+
+`<中文教程>` : <https://github.com/qixianyu-buaa/EigenChineseDocument>
+
 `<博客交程>` : <http://zhaoxuhui.top/blog/2019/08/21/eigen-note-1.html>
+
 本学习过程采用camke，本人是cmake三脚猫使用者。
 # 1. Eigen的安装(Linux22.04)
 ```
