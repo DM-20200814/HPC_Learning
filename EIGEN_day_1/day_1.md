@@ -54,8 +54,8 @@ include_directories(${EIGEN3_INCLUDE_DIR})
 
 # Matrix
 首先我们注意到一个点就是，鼠标查看Vector2d、Vector3d、Matrix3d等类的定义,可以发现他们都是Matrix的别名，Eigen库中矩阵为其基本数据类型，向量也是一种特殊的矩阵。其所有矩阵数据类型都是由一个模板类Matrix生成。
-![Alt text](image-1.png)
-![Alt text](image.png)
+![Alt text](./image/image-1.png)
+![Alt text](./image/image.png)
 > 如果是动态大小的矩阵，参数会变成-1，-1,也是Dynamic关键字的含义。没有使用Eigen命名空间，要用Eigen::Dynamic才能识别。
 ----
 简单来说基本上所有的变量创建都可以由Matrix来完成。

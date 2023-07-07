@@ -5,16 +5,14 @@
 using namespace Eigen;
 
 // 使用Eigen::Matrix类定义一个2行3列的矩阵，赋值为1~6
-void
-test01()
+void test01()
 {
     Matrix<float, 2, 3> matrix_2_3;
     matrix_2_3 << 1, 2, 3, 4, 5, 6;
     std::cout << "matrix_2_3 is:\n" << matrix_2_3 << std::endl;
 }
 // 两种改变动态矩阵的方式，resize和conservativeResize
-void
-test02()
+void test02()
 {
     Matrix<float, -1, -1> matrix_3_2;
     matrix_3_2.resize(2, 3);
@@ -28,8 +26,7 @@ test02()
 }
 
 // 常见的一些矩阵函数
-void
-test03()
+void test03()
 {
     int m{3}, n{4};
     // random
@@ -53,8 +50,7 @@ test03()
     // no logspace vector
 }
 // 矩阵的基本运算
-void
-test04()
+void test04()
 {
     Matrix<double, 3, 3> A_mat_3_3;
     A_mat_3_3 << 1, 2, 3, 4, 5, 6, 7, 8, 9;
@@ -77,15 +73,13 @@ test04()
 }
 
 // 矩阵本身的操作
-void
-test05()
+void test05()
 {
     // ...见文档
 }
 
 // broadcasting
-void
-test06()
+void test06()
 {
     Matrix<double, 2, 4> A_mat_2_4;
     A_mat_2_4 << 1, 2, 3, 4, 5, 6, 7, 8;
@@ -96,14 +90,13 @@ test06()
 }
 
 
-int
-main()
+int main()
 {
     // test01();
     // test02();
-    // test03();
+    test03();
     // test04();
     // test05();
-    test06();
+    // test06();
     return 0;
 }
