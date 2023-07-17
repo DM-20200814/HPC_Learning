@@ -68,14 +68,35 @@ void test04()
     cout << sm2 << endl << endl;
 
     SparseMatrix<double> sm3;
-    sm3 = SparseMatrix<double, ColMajor>(sm1.transpose()) + sm2;
+    sm3 = SparseMatrix<double, ColMajor>(sm1) + sm2;
     cout << sm3 << endl;
+}
+
+void test05()
+{
+    SparseMatrix<double, RowMajor> sm1(2, 2);
+    sm1.insert(0, 0) = 1;
+    sm1.insert(0, 1) = 0;
+    sm1.insert(1, 0) = 0;
+    sm1.insert(1, 1) = 2;
+    // cout << sm1 << endl << endl;
+
+    SparseMatrix<double, ColMajor> sm2(2, 2);
+    sm2.insert(0, 0) = 0;
+    sm2.insert(0, 1) = 0;
+    sm2.insert(1, 0) = 4;
+    sm2.insert(1, 1) = 1;
+    // cout << sm2 << endl << endl;
+    // cout << "rowmajor：" << SparseMatrix<double, RowMajor>(sm2) << endl;
+    cout << sm1 + SparseMatrix<double, RowMajor>(sm2) << endl;
+    cout << sm1 + sm2.transpose() << endl;
 }
 int main()
 {
     // test01();
     // test02();
     // test03();
-    test04();
+    // test04();
+    test05();
     return 0;
 }
